@@ -20,7 +20,7 @@ def interrupted(signum, frame): #copied from resource
     motorMove(0, 0)
 
 def clearText():
-    _ = system('clear') 
+    _ = system('clear')
 
 while runLoop1 == True:
     print("---===MOMENTUM ROBOT CONTROL===---")
