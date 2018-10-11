@@ -16,12 +16,6 @@ try:
 except:
     pass
 
-def interrupted(signum, frame): #copied from resource
-    motorMove(0, 0)
-
-def clearText():
-    _ = system('clear') 
-
 while runLoop1 == True:
     print("---===MOMENTUM ROBOT CONTROL===---")
     print("Chose your control type:")
@@ -50,10 +44,8 @@ def motorMove(dir1, dir2):
         RPL.servoWrite(mtrLeft, 1500)
         RPL.servoWrite(mtrRight, dir2)
     else:
-	print("Halting both motors")
         RPL.servoWrite(mtrLeft, 1500)
         RPL.servoWrite(mtrRight, 1500)
-    clearText()
 
 def interrupted(signum, frame): #copied from resource
     motorMove(0, 0)
@@ -67,11 +59,11 @@ while runLoop2 == True:
     input = sys.stdin.read(1) #copied from resource;
     signal.setitimer(signal.ITIMER_REAL, 0) #copied from resource;
     if input == "w":
-        motorMove(2000, 1000)
+        motorMove(2000, 2000)
     elif input == "a":
-        motorMove(0, 1000)
+        motorMove(0, 2000)
     elif input == "s":
-        motorMove(1000, 2000)
+        motorMove(1000, 1000)
     elif input == "d":
         motorMove(2000, 0)
     elif input == "x":
