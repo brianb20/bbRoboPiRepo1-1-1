@@ -1,4 +1,4 @@
-import roboPiLib as RPL
+import RoboPiLib as RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 import sys, tty, termios, signal, time
 
