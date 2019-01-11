@@ -12,8 +12,8 @@ RPL.pinMode(sensor_pin_2, RPL.INPUT)
 ticks = 100000
 ticksDone = 0
 
-mtrLeft = [0, 1]
-mtrRight = [1, -1]
+mtrLeft = [0, -1]
+mtrRight = [1, 1]
 
 outputLog = ["---"]
 
